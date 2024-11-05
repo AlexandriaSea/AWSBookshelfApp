@@ -1,0 +1,36 @@
+﻿<Window x:Class="WenjieZhou_COMP306Lab2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WenjieZhou_COMP306Lab2"
+        mc:Ignorable="d"
+        Title="eBook Reader" Height="300" Width="450">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0">
+            <TextBlock Text="Email:" Width="250" Height="20" Margin="0,10,0,0"/>
+            <TextBox x:Name="emailTextBox" Width="250" Height="30"/>
+
+            <TextBlock Text="Password:" Width="250" Height="20" Margin="0,10,0,0"/>
+            <PasswordBox x:Name="passwordBox" Width="250" Height="30"/>
+
+            <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                <Button Content="Login" Width="120" Height="30" Background="CadetBlue" Click="LoginButton_Click"/>
+                <Button Content="Exit" Width="120" Height="30" Margin="10,0,0,0" Background="CadetBlue" Click="ExitButton_Click"/>
+            </StackPanel>
+        </StackPanel>
+
+        <Border Grid.Row="1" Background="LightGray" HorizontalAlignment="Stretch" VerticalAlignment="Bottom">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40">
+                <TextBlock Text="Author: Wenjie Zhou" Margin="10,0" VerticalAlignment="Center"/>
+                <TextBlock Text=" | " VerticalAlignment="Center"/>
+                <TextBlock Text="Email: wzhou56@my.centennialcollege.ca" Margin="10,0" VerticalAlignment="Center"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
